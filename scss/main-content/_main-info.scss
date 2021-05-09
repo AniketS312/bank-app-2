@@ -1,0 +1,129 @@
+.main-info {
+  grid-area: main-info;
+  display: flex;
+  justify-content: space-between;
+  & > * {
+    width: 48%;
+    padding: 2%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  //   Left Section
+  &__account-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .text-info {
+      display: flex;
+      justify-content: space-between;
+      & > * {
+        margin-block-end: 0;
+      }
+    }
+  }
+  .text-account {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+
+    h6:first-child {
+      margin-block-end: 0;
+    }
+    &__info h6:last-child {
+      margin-block-start: 0em;
+    }
+  }
+  .buttons {
+    button {
+      height: 2.5rem;
+      width: 8rem;
+      margin-top: 0.2rem;
+      padding: 0;
+      border: none;
+      border-radius: 5px;
+      background-image: url(./img/topograph.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-weight: 700;
+      position: relative;
+      overflow: hidden;
+      span {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    &__transfer span {
+      background-color: rgba(5, 131, 115, 0.8);
+      color: white;
+    }
+    &__link span {
+      background-color: rgba(220, 222, 231, 0.8);
+    }
+  }
+  &__announcement {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(./img/topograph-2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    & > * {
+      z-index: 10;
+    }
+    .overlay {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(5, 131, 115, 0.8);
+    }
+    .announcement-text {
+      color: white;
+      width: 40%;
+      button {
+        height: 2.5rem;
+        width: 11rem;
+        margin-top: 0.2rem;
+        padding: 0;
+        border: none;
+        border-radius: 5px;
+        background-image: url(./img/topograph.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-weight: 700;
+        position: relative;
+        overflow: hidden;
+        span {
+          position: absolute;
+          background-color: rgba(220, 222, 231, 0.8);
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .announcement-pagnation {
+      img {
+        height: 150px;
+        width: 150px;
+      }
+    }
+  }
+}

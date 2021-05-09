@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Banking App 2 | https://dribbble.com/shots/11625497-NevBank-Dashboard
+    </title>
+
+    <!-- Using scss -g -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__navbar menu-font">
+        <nav class="menu">
+          <div class="menu__logo">
+            <img src="./img/logo.png" alt="Versatile Logo" />
+            Versatile Bank
+          </div>
+          <div class="menu__items">
+            <ul class="menu__item-list">
+              <li class="menu__item-list__item">
+                <a href="#" class="active-menu">My Account</a>
+              </li>
+              <li class="menu__item-list__item">
+                <a href="#">Transactions</a>
+              </li>
+              <li class="menu__item-list__item"><a href="#">My Cards</a></li>
+              <li class="menu__item-list__item"><a href="#">Offers</a></li>
+              <li class="menu__item-list__item"><a href="#">Investments</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="settings">
+          <div class="settings__quick-actions">
+            <div class="bell">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                data-reactroot=""
+              >
+                <path
+                  fill="none"
+                  d="M13.87 4.89L13.56 2.44C13.53 2.19 13.32 2 13.06 2H9.95C9.7 2 9.48 2.19 9.45 2.44L9.18 4.59C9.16 4.77 9.03 4.93 8.86 4.99C8.02 5.3 7.22 5.78 6.53 6.4L4.25 5.44C4.02 5.34 3.75 5.43 3.62 5.65L2.06 8.35C1.94 8.57 2 8.85 2.2 9L4.17 10.49C3.96 11.5 3.96 12.53 4.16 13.51H4.17L2.2 15C2 15.15 1.94 15.43 2.07 15.65L3.63 18.35C3.76 18.57 4.03 18.66 4.26 18.56L6.54 17.6L6.53 17.61C6.9 17.94 7.32 18.24 7.77 18.5C8.22 18.76 8.68 18.97 9.16 19.13V19.11L9.47 21.56C9.48 21.81 9.7 22 9.95 22H13.07C13.32 22 13.53 21.81 13.57 21.56L13.84 19.41C13.86 19.23 13.99 19.07 14.16 19.01C15 18.7 15.8 18.22 16.49 17.6L18.77 18.56C19 18.66 19.27 18.57 19.4 18.35L20.96 15.65C21.09 15.43 21.03 15.15 20.83 15L18.86 13.51C19.07 12.5 19.07 11.47 18.87 10.49H18.86L20.81 9C21.01 8.85 21.07 8.57 20.94 8.35L19.38 5.65C19.25 5.43 18.98 5.34 18.75 5.44L16.48 6.4L16.49 6.39C16.12 6.06 15.7 5.76 15.25 5.5C14.8 5.24 14.34 5.03 13.86 4.87"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                  undefined="1.5"
+                ></path>
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  stroke="#000000"
+                  d="M13.87 4.89L13.56 2.44C13.53 2.19 13.32 2 13.06 2H9.95C9.7 2 9.48 2.19 9.45 2.44L9.18 4.59C9.16 4.77 9.03 4.93 8.86 4.99C8.02 5.3 7.22 5.78 6.53 6.4L4.25 5.44C4.02 5.34 3.75 5.43 3.62 5.65L2.06 8.35C1.94 8.57 2 8.85 2.2 9L4.17 10.49C3.96 11.5 3.96 12.53 4.16 13.51H4.17L2.2 15C2 15.15 1.94 15.43 2.07 15.65L3.63 18.35C3.76 18.57 4.03 18.66 4.26 18.56L6.54 17.6L6.53 17.61C6.9 17.94 7.32 18.24 7.77 18.5C8.22 18.76 8.68 18.97 9.16 19.13V19.11L9.47 21.56C9.48 21.81 9.7 22 9.95 22H13.07C13.32 22 13.53 21.81 13.57 21.56L13.84 19.41C13.86 19.23 13.99 19.07 14.16 19.01C15 18.7 15.8 18.22 16.49 17.6L18.77 18.56C19 18.66 19.27 18.57 19.4 18.35L20.96 15.65C21.09 15.43 21.03 15.15 20.83 15L18.86 13.51C19.07 12.5 19.07 11.47 18.87 10.49H18.86L20.81 9C21.01 8.85 21.07 8.57 20.94 8.35L19.38 5.65C19.25 5.43 18.98 5.34 18.75 5.44L16.48 6.4L16.49 6.39C16.12 6.06 15.7 5.76 15.25 5.5C14.8 5.24 14.34 5.03 13.86 4.87"
+                ></path>
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  stroke="#000000"
+                  fill="none"
+                  d="M11.51 16C13.7191 16 15.51 14.2091 15.51 12C15.51 9.79086 13.7191 8 11.51 8C9.30086 8 7.51 9.79086 7.51 12C7.51 14.2091 9.30086 16 11.51 16Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="bell">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                data-reactroot=""
+              >
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  stroke="#000000"
+                  fill="none"
+                  d="M20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20Z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1.5"
+                  stroke="#000000"
+                  fill="none"
+                  d="M20 4H4C2.9 4 2 4.9 2 6L12 13L22 6C22 4.9 21.1 4 20 4Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="bell">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                data-reactroot=""
+              >
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                  stroke="#000000"
+                  fill="none"
+                  d="M18 8C18 6.41 17.37 4.88 16.24 3.76C15.12 2.63 13.59 2 12 2C10.41 2 8.87999 2.63 7.75999 3.76C6.62999 4.88 6 6.41 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z"
+                ></path>
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-width="1.5"
+                  stroke="#000000"
+                  d="M13.73 21C13.55 21.3 13.3 21.56 13 21.73C12.7 21.9 12.35 22 12 22C11.65 22 11.3 21.91 11 21.73C10.7 21.55 10.44 21.3 10.27 21"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="settings__name menu-font">John Doe</div>
+          <div class="settings__logout menu-font">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              data-reactroot=""
+            >
+              <path
+                fill="none"
+                d="M2 8V5C2 3.34 3.34 2 5 2H19C20.66 2 22 3.34 22 5V19C22 20.66 20.66 22 19 22H5C3.34 22 2 20.66 2 19V16"
+                undefined="1.5"
+              ></path>
+              <path
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="1.5"
+                stroke="#000000"
+                d="M2 8V5C2 3.34 3.34 2 5 2H19C20.66 2 22 3.34 22 5V19C22 20.66 20.66 22 19 22H5C3.34 22 2 20.66 2 19V16"
+              ></path>
+              <path
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                stroke="#000000"
+                d="M10 7L5 12L10 17"
+              ></path>
+              <path
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="1.5"
+                stroke="#000000"
+                d="M18 12H5"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="container__main-content menu-font">
+        <section class="main-info">
+          <div class="main-info__account-info">
+            <div class="text-info">
+              <h6 class="text-info__label">Main account</h6>
+              <h6 class="text-info__label">Available funds</h6>
+            </div>
+            <div class="text-account">
+              <div class="text-account__info">
+                <h6 class="text-account__info__account-name">
+                  NetBank Savings Account
+                </h6>
+                <h6 class="text-account__info__account-number">
+                  XXXX XXXX XXXX XXXX
+                </h6>
+              </div>
+              <div class="text-account__balance">
+                <h6 class="text-account__balance__amount">
+                  68.789<span>.59</span><span>$</span>
+                </h6>
+              </div>
+            </div>
+            <div class="buttons">
+              <button class="buttons__transfer">
+                <span>Transfer Money</span>
+              </button>
+              <button class="buttons__link"><span>Link Accounts</span></button>
+            </div>
+          </div>
+          <div class="main-info__announcement">
+            <div class="overlay"></div>
+            <div class="announcement-text">
+              <h6 class="announcement-text__heading">Define standing orders</h6>
+              <h6 class="announcement-text__text">
+                we help you remeber about recurring payments for fixed price.
+                Define once standing order and bank will take care of your
+                regular transfers.
+              </h6>
+              <button class="announcement-text__button">
+                <span>Define standing order</span>
+              </button>
+            </div>
+            <div class="announcement-pagnation">
+              <div class="pagnation">
+                <button class="announcement-pagnation__button">
+                  Define standing order
+                </button>
+                <img src="./img/17-Time.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="accounts">
+          <div class="account chequing">
+            <div class="account__container-left">
+              <div class="account__container-left-info">
+                <h6 class="header">Chequing - 1</h6>
+                <div class="account-info">
+                  <h6>xx *** XXXX</h6>
+                  <div class="copy-mechanic">&nbsp;</div>
+                </div>
+              </div>
+              <div class="balance">12.220.65$</div>
+            </div>
+            <div class="account__container-right">
+              <svg
+                class="card"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                data-reactroot=""
+              >
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1"
+                  stroke="#221b38"
+                  fill="none"
+                  d="M20.5 19H3.5C2.67 19 2 18.33 2 17.5V10H22V17.5C22 18.33 21.33 19 20.5 19Z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1"
+                  stroke="#221b38"
+                  fill="none"
+                  d="M22 10H2V6.5C2 5.67 2.67 5 3.5 5H20.5C21.33 5 22 5.67 22 6.5V10Z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1"
+                  stroke="#221b38"
+                  d="M22 9H2V10H22V9Z"
+                ></path>
+              </svg>
+              <div class="small-menu">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-reactroot=""
+                >
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                    stroke="#8c8c8c"
+                    fill="#8c8c8c"
+                    d="M12 6C13.1046 6 14 5.10457 14 4C14 2.89543 13.1046 2 12 2C10.8954 2 10 2.89543 10 4C10 5.10457 10.8954 6 12 6Z"
+                  ></path>
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                    stroke="#8c8c8c"
+                    fill="#8c8c8c"
+                    d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
+                  ></path>
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                    stroke="#8c8c8c"
+                    fill="#8c8c8c"
+                    d="M12 22C13.1046 22 14 21.1046 14 20C14 18.8954 13.1046 18 12 18C10.8954 18 10 18.8954 10 20C10 21.1046 10.8954 22 12 22Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="account savings">
+            <div class="account__container-left">
+              <div class="account__container-left-info">
+                <h6 class="header">Chequing - 1</h6>
+                <div class="account-info">
+                  <h6>xx *** XXXX</h6>
+                  <div class="copy-mechanic">&nbsp;</div>
+                </div>
+              </div>
+              <div class="balance">12.220.65$</div>
+            </div>
+            <div class="account__container-right">
+              <svg
+                class="card"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                data-reactroot=""
+              >
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1"
+                  stroke="#221b38"
+                  fill="none"
+                  d="M21.9 16.01C21.97 15.85 22 15.68 22 15.5V8H2V15.5C2 16.33 2.67 17 3.5 17H12C12 14.24 14.24 12 17 12C19.42 12 21.44 13.72 21.9 16.01Z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1"
+                  stroke="#221b38"
+                  fill="none"
+                  d="M22 8H2V4.5C2 3.67 2.67 3 3.5 3H20.5C21.33 3 22 3.67 22 4.5V8Z"
+                  clip-rule="evenodd"
+                  fill-rule="evenodd"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1"
+                  stroke="#221b38"
+                  d="M22 7H2V8H22V7Z"
+                ></path>
+                <path
+                  stroke-linejoin="round"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="1"
+                  stroke="#221b38"
+                  fill="none"
+                  d="M17 22C19.7614 22 22 19.7614 22 17C22 14.2386 19.7614 12 17 12C14.2386 12 12 14.2386 12 17C12 19.7614 14.2386 22 17 22Z"
+                ></path>
+                <path
+                  stroke-miterlimit="10"
+                  stroke-width="1"
+                  stroke="#221b38"
+                  d="M14.6001 16.3499L16.4001 18.1499L19.4001 15.1499"
+                ></path>
+              </svg>
+              <div class="small-menu">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-reactroot=""
+                >
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                    stroke="#8c8c8c"
+                    fill="#8c8c8c"
+                    d="M12 6C13.1046 6 14 5.10457 14 4C14 2.89543 13.1046 2 12 2C10.8954 2 10 2.89543 10 4C10 5.10457 10.8954 6 12 6Z"
+                  ></path>
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                    stroke="#8c8c8c"
+                    fill="#8c8c8c"
+                    d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
+                  ></path>
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                    stroke="#8c8c8c"
+                    fill="#8c8c8c"
+                    d="M12 22C13.1046 22 14 21.1046 14 20C14 18.8954 13.1046 18 12 18C10.8954 18 10 18.8954 10 20C10 21.1046 10.8954 22 12 22Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="account credit-card">
+            <div class="account__container-left">
+              <div class="account__container-left-info">
+                <h6 class="header">Chequing - 1</h6>
+                <div class="account-info">
+                  <h6>xx *** XXXX</h6>
+                  <div class="copy-mechanic">&nbsp;</div>
+                </div>
+              </div>
+              <div class="balance">12.220.65$</div>
+            </div>
+            <div class="account__container-right">
+              <img src="./img/mastercard.jpg" alt="Mastercard logo" />
+              <div class="small-menu">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-reactroot=""
+                >
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                    stroke="#8c8c8c"
+                    fill="#8c8c8c"
+                    d="M12 6C13.1046 6 14 5.10457 14 4C14 2.89543 13.1046 2 12 2C10.8954 2 10 2.89543 10 4C10 5.10457 10.8954 6 12 6Z"
+                  ></path>
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                    stroke="#8c8c8c"
+                    fill="#8c8c8c"
+                    d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
+                  ></path>
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1"
+                    stroke="#8c8c8c"
+                    fill="#8c8c8c"
+                    d="M12 22C13.1046 22 14 21.1046 14 20C14 18.8954 13.1046 18 12 18C10.8954 18 10 18.8954 10 20C10 21.1046 10.8954 22 12 22Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="create-new">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              data-reactroot=""
+            >
+              <path
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="1"
+                stroke="#8c8c8c"
+                fill="#8c8c8c"
+                d="M12 6C13.1046 6 14 5.10457 14 4C14 2.89543 13.1046 2 12 2C10.8954 2 10 2.89543 10 4C10 5.10457 10.8954 6 12 6Z"
+              ></path>
+              <path
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="1"
+                stroke="#8c8c8c"
+                fill="#8c8c8c"
+                d="M12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"
+              ></path>
+              <path
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-miterlimit="10"
+                stroke-width="1"
+                stroke="#8c8c8c"
+                fill="#8c8c8c"
+                d="M12 22C13.1046 22 14 21.1046 14 20C14 18.8954 13.1046 18 12 18C10.8954 18 10 18.8954 10 20C10 21.1046 10.8954 22 12 22Z"
+              ></path>
+            </svg>
+          </div>
+        </section>
+        <section class="account-info">
+          <div class="account-info__transactions">
+            <div class="heading">
+              <h6>Latest transactions</h6>
+              <a href="#"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  data-reactroot=""
+                >
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="1"
+                    stroke="#ffffff"
+                    d="M15 6L21 12L15 18"
+                  ></path>
+                  <path
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="1"
+                    stroke="#ffffff"
+                    d="M21 12H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <table class="transaction-summary">
+              <tr class="title">
+                <td>Time</td>
+                <td>Place</td>
+                <td>type of payment</td>
+                <td>type of purchase</td>
+                <td>amount</td>
+                <td>moreinfo</td>
+              </tr>
+            </table>
+          </div>
+          <div class="account-info__summary">
+            <h2>content</h2>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Scripts here -->
+    <script src="./index.js"></script>
+  </body>
+</html>
