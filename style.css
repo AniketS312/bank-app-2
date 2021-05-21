@@ -239,14 +239,14 @@ body .container__main-content {
   display: flex;
   margin: 2rem 0;
   height: 70%;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .accounts .account {
   border-radius: 10px;
   background-color: white;
   padding: 2rem 1rem;
   height: 100%;
-  width: 25%;
+  width: 24%;
   display: flex;
   justify-content: space-between;
 }
@@ -294,15 +294,24 @@ body .container__main-content {
   padding-bottom: 2rem;
 }
 .account-info > * {
-  width: 48%;
   padding: 2%;
   background-color: white;
   border-radius: 10px;
 }
 
+.account-info__transactions {
+  width: 58%;
+}
 .account-info__transactions .heading {
   display: flex;
   justify-content: space-between;
+}
+.account-info__transactions .transaction-summary {
+  width: 100%;
+}
+
+.account-info__summary {
+  width: 38%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,7 +4,6 @@
   padding-bottom: 2rem;
 
   & > * {
-    width: 48%;
     padding: 2%;
     background-color: white;
     border-radius: 10px;
@@ -12,10 +11,17 @@
 }
 
 .account-info__transactions {
+  width: 58%;
+
   .heading {
     display: flex;
     justify-content: space-between;
   }
   .transaction-summary {
+    width: 100%;
   }
+}
+
+.account-info__summary {
+  width: 38%;
 }
