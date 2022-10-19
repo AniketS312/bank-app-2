@@ -1,0 +1,29 @@
+.container {
+    padding: 2rem;
+    background-color: rgb(38,40,51);
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.container span:first-of-type {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+span {
+    font-size: 1rem;
+}
+
+.asset {
+    opacity: .2;
+    position: absolute;
+    transform: rotate(-30deg);
+    right: -50px;
+    top: -50px;
+}

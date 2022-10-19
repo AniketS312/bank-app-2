@@ -1,3 +1,22 @@
+1. Starting Notes
+
+**Project Overview**
+    - Create a overview of a simple banking app
+    - Design should be plain but appealing
+    - Main focus will be on posting new transactions
+    - Will use dummy data as a start than move it to the cloud (Firebase or maybe POSTGRES)
+
+
+** Design **
+The Design of the website will be broken down into 3 main section. The Nav, Main content, and Extra info
+    *The Nav*
+        - The navigation
+    *Main Content*
+        - Balance
+        - Total revenue/ Total Costs
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,27 @@
+.action-container {
+    display: flex;
+    gap: 20px;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 5%;
+    background-color: #ececec;
+    cursor: pointer;
+    border: none;
+    
+}
+
+.action svg {
+    height: 30px;
+    width: auto;
+    transition: all .2s;
+}
+
+.action:hover svg {
+    scale: 1.5;
+} 

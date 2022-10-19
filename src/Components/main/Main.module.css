@@ -1,0 +1,12 @@
+.main {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 0;
+}
+
+/* Dashboard */
+/* Could not bring in css to one file. Might want to look into this */
+
+/* End of Dashboard */

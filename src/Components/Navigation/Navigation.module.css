@@ -1,0 +1,89 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1% 3%;
+    background-color: rgb(38,40,51);
+    color: rgb(187,189,192);
+    height: 100%;
+}
+
+/* Logo Styling */
+.logo-section {
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo-section img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-section span {
+    color: whitesmoke;
+    font-size: 1.6rem;
+}
+/* navigation Styling */
+.navigation {
+    justify-self: center;
+    flex-grow: 3;
+    text-align: left;
+    padding-left: 1em;
+}
+
+.navigation ul {
+    padding: 0;
+    list-style: none;
+    
+}
+
+.navigation ul li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding-left: .8rem;
+}
+
+.navigation span {
+    font-size: 1.1rem;
+}
+
+/* Profile Styling */
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+  
+}
+
+.user .user-logo{
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255,249,233);
+    border-radius: 50%;
+    fill: rgb(38,40,51);
+}
+
+.user span {
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user span p:first-child {
+    margin: 0;
+    padding-bottom: .2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.user span p:last-child {
+    margin: 0;
+}   
+
+
+
