@@ -1,25 +1,26 @@
-import React, { useEffect } from "react";
+import React from "react";
 import classes from './Navigation.module.css'
 import Logo from '../../Assets/bank-logo.png'
-import { useState } from 'react';
 
 function Navigation(props) {
 // Setup of menu options 
     const menuItems = [{
-        menu: 'Home',
-        link: 'empty'
+        menu: 'Deposit',
+        onClickFunction: props.showDeposit
     },
     {
-        menu: 'Transaction',
-        link: 'empty'
+        menu: 'Transfer',
+        onClickFunction: props.showTransfer
     },
     {
-        menu: 'Settings',
-        link: 'empty'
+        menu: 'Pay Bills',
+        onClickFunction: props.showPayment
     }]
-    const mappedMenu = menuItems.map(item => <li key={item.menu}>{item.menu}</li>)
-
+    const mappedMenu = menuItems.map(item => <li key={item.menu}><button onClick={item.onClickFunction}>{item.menu}</button></li>)
 // End of menu options 
+
+// Clear Dummy Data
+
     return (
         <nav className={classes.nav}>
             {/* Logo */}
@@ -35,9 +36,6 @@ function Navigation(props) {
                     {mappedMenu}
                 </ul>
                 <span>Preferences</span>
-                <ul>
-                    {mappedMenu}
-                </ul>
             </div>
             {/* End of Menu/Navigation */}
             {/* Profile Settings */}

@@ -42,22 +42,23 @@ function App() {
 
   // Setting up balance - Balance Component
   const [dummyData, setDummydata] = useState(DUMMY_DATA)
-  const [balance, setBalance] = useState(23200)
+  const [balance, setBalance] = useState(0)
   const [revenue, setRevenue] = useState(0)
   const [expense, setExpense] = useState(0)
-  // Triggers for forms
 
 
-// Generate total revenue and expenses for the month
+// Generate total revenue and expenses for the month - INITAL BANK BALANCE S/B 23200
 useEffect(() => {
-  const revenue = DUMMY_DATA.filter((element) => element.expense === false);
+  const data = DUMMY_DATA;
+  const revenue = data.filter((element) => element.expense === false);
   const monthlyRevenue = revenue.reduce((prevValue, currentValue) => prevValue + currentValue['price'], 0)
   setRevenue(monthlyRevenue)
-  const expense = DUMMY_DATA.filter((element) => element.expense === true);
-  const totalExpense = expense.reduce((prevValue, currentValue) => prevValue + currentValue['price'], 0)
-  setExpense(totalExpense)
-  setBalance(b => (+b + monthlyRevenue - totalExpense))
-},[dummyData])
+  const expense = data.filter((element) => element.expense === true);
+  const monthlyExpense = expense.reduce((prevValue, currentValue) => prevValue + currentValue['price'], 0)
+  setExpense(monthlyExpense)
+  setBalance(23200 + monthlyRevenue - monthlyExpense)
+  console.log(monthlyRevenue, monthlyExpense,)
+},[])
 
 
 const totalBalance = (balance).toLocaleString('en-US', {
@@ -118,6 +119,7 @@ function depositFunction(e) {
         icon: <RevenueLogo />,
       })])
       setShowDepositForm(false)
+      setBalance(b => b + depositAmount)
     }
 };
 
@@ -131,13 +133,14 @@ if(depositer !== 'New Depositor' && depositAmount >= 1) {
     icon: <RevenueLogo />,
   })])
   setShowDepositForm(false)
+  setBalance(b => b + depositAmount)
 }
 };
 
 // ----- Payment function - form checks in Bills.js
 function addPaymentFunction(payeeName, referenceNumber, amount) {
-  setDummydata([DUMMY_DATA.push({
-    id: DUMMY_DATA.length + 1,
+  setDummydata([dummyData.push({
+    id: dummyData.length + 1,
     transaction: payeeName,
     type: 'Expense',
     price: amount,
@@ -147,11 +150,13 @@ function addPaymentFunction(payeeName, referenceNumber, amount) {
     })
   ]);
   setShowBillsForm(false)
+  setBalance(b => b - amount)
+
 };
 
 function addTransfer(name, amount) {
-  setDummydata([DUMMY_DATA.push({
-    id: DUMMY_DATA.length + 1,
+  setDummydata([dummyData.push({
+    id: dummyData.length + 1,
     transaction: name,
     type: 'Expense',
     price: amount,
@@ -161,12 +166,18 @@ function addTransfer(name, amount) {
     })
   ]);
   setShowTransferForm(false)
+  setBalance(b => b - amount)
+
 }
 
   return (
     <div className="App">
       <Navigation
-      greeting={greeting} />
+      greeting={greeting}
+      showDeposit={showDeposit}
+      showTransfer={showTransfer}
+      showPayment={showPayment}
+      />
       <Main 
       dashboardTime={`Today is ${days[day]}, ${months[month]} ${numberDay} `}
       // Balance Componenet
