@@ -35,7 +35,6 @@ function Navigation(props) {
                 <ul>
                     {mappedMenu}
                 </ul>
-                <span>Preferences</span>
             </div>
             {/* End of Menu/Navigation */}
             {/* Profile Settings */}
