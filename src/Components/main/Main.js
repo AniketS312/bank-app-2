@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Balance from "./Balance";
 import Dashboard from "./Dashboard";
 import Transaction from "./Transaction";

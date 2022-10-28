@@ -4,7 +4,7 @@ import Background from "./Components/Background";
 import classes from './Deposit.module.css'
 
 function Deposit(props) {
-    const [depositerList, setDepositerList] = useState(['Select Depositor','Paypal', 'Fiverr', 'America Agency', 'New Depositor'])
+    const depositerList = ['Select Depositor','Paypal', 'Fiverr', 'America Agency', 'New Depositor'];
     const [checkNewDepositer, setCheckNewDepositer] = useState('')
     // Map select options
     const mapDepositers = depositerList.map((depositer) => <option key={depositer} value={depositer}>{depositer.charAt(0).toUpperCase() + depositer.slice(1)}</option>)

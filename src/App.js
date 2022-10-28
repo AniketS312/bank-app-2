@@ -57,7 +57,6 @@ useEffect(() => {
   const monthlyExpense = expense.reduce((prevValue, currentValue) => prevValue + currentValue['price'], 0)
   setExpense(monthlyExpense)
   setBalance(23200 + monthlyRevenue - monthlyExpense)
-  console.log(monthlyRevenue, monthlyExpense,)
 },[])
 
 
@@ -120,6 +119,7 @@ function depositFunction(e) {
       })])
       setShowDepositForm(false)
       setBalance(b => b + depositAmount)
+      setRevenue(b => b + depositAmount)
     }
 };
 
@@ -134,6 +134,7 @@ if(depositer !== 'New Depositor' && depositAmount >= 1) {
   })])
   setShowDepositForm(false)
   setBalance(b => b + depositAmount)
+  setRevenue(b => b + depositAmount)
 }
 };
 
@@ -151,7 +152,7 @@ function addPaymentFunction(payeeName, referenceNumber, amount) {
   ]);
   setShowBillsForm(false)
   setBalance(b => b - amount)
-
+  setExpense(b => b + amount)
 };
 
 function addTransfer(name, amount) {
@@ -167,6 +168,7 @@ function addTransfer(name, amount) {
   ]);
   setShowTransferForm(false)
   setBalance(b => b - amount)
+  setExpense(b => b + amount)
 
 }
 

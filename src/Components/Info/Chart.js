@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import * as d3 from 'd3';
 
 import classes from './Chart.module.css'
@@ -7,9 +7,11 @@ import classes from './Chart.module.css'
 function Chart(props) {
     const pieRef = useRef()
 // Create expense and revenue data
-    const data = [{name: 'Revenue', value: props.revenue}, {name: 'Expense', value: props.expense}];
+console.log(props.revenue, props.expense)
+
 // Fill in svg
     useEffect(()=> {
+        const data =  [{name: 'Revenue', value: props.revenue}, {name: 'Expense', value: props.expense}]
     // Svg Container
         const w = 200;
         const h = 200;
@@ -32,7 +34,7 @@ function Chart(props) {
             // Centers path in svg elements
             .attr("transform", "translate(" + w / 2 + "," + h / 2 + ")")
             .attr('fill', d => color(d.value))
-            .style('opacity', 0.7)
+            .style('opacity')
 
         // Set up annotations - MIGHT NOT NEED
         // svg.selectAll()
@@ -41,7 +43,7 @@ function Chart(props) {
         //     .text(d => d.data.name)
         //     .attr('transform', d => `translate(${arcGenerator.centroid(d)})`)
         //     .style('text-anchor', 'middle')
-    },[data])
+    },[props.dummyData, props.expense, props.revenue])
 
 
 // Build the pie chart  

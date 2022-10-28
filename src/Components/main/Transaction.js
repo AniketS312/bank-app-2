@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 import DUMMY_DATA from "./DataTransaction";
 
 import classes from './Transaction.module.css';
 
 function Transaction(props) {
-    const [data, setData] = useState(DUMMY_DATA)
-
     return (
         <div className={classes['transaction-container']}>
         <div className={classes.title}>
@@ -14,7 +12,7 @@ function Transaction(props) {
                 <span>{props.month} {props.year}</span>
             </div>
             <div className={classes['all-transactions']}>
-                {data.map((data) => ( 
+                {DUMMY_DATA.map((data) => ( 
                     <div key={data.id} className={classes.transaction}>
                         <div className={classes.info}>
                             <div className={classes.icon}>
